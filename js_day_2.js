@@ -92,16 +92,14 @@ function prime(num)
     }
     return "Prime";
 }
-function digsum(num)
-{
-    let sum=0;
-    while(num>0)
-    {
-       let r=num%10;
-       sum=sum+r;
-       num=num/10;
-    }
-    return sum;
+function digsum(num) {
+  let sum = 0;
+  while (num > 0) {
+    let r = num % 10;
+    sum += r;
+    num = Math.floor(num / 10);
+  }
+  return sum;
 }
 function rev(str)
 {
@@ -128,28 +126,69 @@ function cvowels(str)
     }
     return count;
 }
-function arm(num)
+function arm(num) {
+  let temp = num;
+  let res = 0;
+  let count = 0;
+
+  while (temp > 0) {
+    count++;
+    temp = Math.floor(temp / 10);
+  }
+
+  temp = num;
+  while (temp > 0) {
+    let r = temp % 10;
+    res += Math.pow(r, count);
+    temp = Math.floor(temp / 10);
+  }
+
+  return res === num;
+}
+
+function minmax(arr)
 {
-    temp=num;
-    let res=0;
-    let count=0;
-    while(temp>0)
+  let min=Infinity;
+  let max=-Infinity;
+  for(let i=0;i<arr.length;i++)
+  {
+    if(arr[i]>max)
     {
-        count++;
-        temp=temp/10;
+      max=arr[i];
     }
-    temp=num;
-    while(temp>0)
+    if(arr[i]<min)
     {
-        let r=temp%10;
-        res=res+(Math.pow(r,count));
-        temp=temp/10;
+      min=arr[i];
     }
-    if(res==num)
-    {
-        return true;
-    }
-    return false;
+  }
+  let ans=[min,max];
+  return ans;
+}
+function fibo(n)
+{
+  if(n==1)
+  {
+    console.log(0);
+    return;
+  }
+  if(n==2)
+  {
+    console.log(0);
+    console.log(1);
+    return;
+  }
+  let f=0;
+  let s=1;
+  console.log(f); 
+  console.log(s);
+  for(let i=3;i<=n;i++)
+  {
+    let t=f+s;
+    console.log(t);
+    f=s;
+    s=t;
+  }
+  return;
 }
 console.log(addnum(23,89));
 console.log(printname("Sanskriti"));
@@ -170,4 +209,4 @@ console.log(digsum(6534));
 console.log(rev("EveryOne"));
 console.log(cvowels("Hello Sanskriti Here"));
 console.log(arm(231));
-
+console.log(minmax([21,34,23,12,65,1]));
