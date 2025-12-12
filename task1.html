@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text on Button Click</title>
+</head>
+<body>
+    <P id="para">
+        This paragraph gets affected when the button is clicked
+    </P>
+    <button id="btn">click</button>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(){
+      document.getElementById("para").innerHTML="Welcome to JavaScript";
+    });
+    </script>
+</html>

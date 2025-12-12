@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image switcher</title>
+</head>
+<body>
+    <button id="bt1">Prev</button>
+    <button id="bt2">Next</button>
+    <img id="pic" src="images.jpeg" width="200" height="200">
+</body>
+<script>
+document.getElementById("bt1").addEventListener("click",function()
+{
+    document.getElementById("pic").src="images.jpeg";
+});
+document.getElementById("bt2").addEventListener("click",function()
+{
+    document.getElementById("pic").src="image-optimisation-scaled.jpg";
+});
+</script>
+</html>

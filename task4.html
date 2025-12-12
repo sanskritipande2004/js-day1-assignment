@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and display of Image</title>
+</head>
+<body>
+    <button id="bt">click</button>
+    <p id="para">Paragraph can be displayed and hid using javascript</p>
+</body>
+<script>
+document.getElementById("bt").addEventListener("click",function()
+{
+  if(document.getElementById("para").style.display=="none")
+  {
+    document.getElementById("para").style.display="block"
+  }
+  else
+  {
+    document.getElementById("para").style.display="none"
+  }
+});
+</script>
+</html>
