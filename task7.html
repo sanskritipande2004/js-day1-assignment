@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Reader</title>
+</head>
+<body>
+    <form id="frm">
+        <input type="text" id="inp">
+        <button type="submit" id="btn">Submit</button>
+    </form>
+     <p id="output"></p>
+</body>
+<script>
+    document.getElementById("frm").addEventListener("submit",function(f)
+{
+   f.preventDefault();
+   let name = document.getElementById("inp").value; 
+   document.getElementById("output").innerText=name;
+});
+</script>
+</html>

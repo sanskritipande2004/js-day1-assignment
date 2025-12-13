@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Create Element Dynamically </title>
+</head>
+<body>
+    <button id="btn">Add Box</button>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function()
+{
+   let box=document.createElement("div");
+   box.innerText="This is a new created box";
+   box.style.backgroundColor="pink";
+   box.style.padding="20px";
+   box.style.border="2px solid black";
+   document.body.appendChild(box);
+});
+</script>
+</html>
