@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <input placeholder="Enter the task" id="inp">
+    <button id="btn">TASK</button>
+    <ul id="taskList"></ul>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function()
+{
+    let text=document.getElementById("inp").value;
+    if(text=="")
+    {
+       alert("Please enter the text");
+       return;
+    }
+    let li=document.createElement("li");
+    li.innerText=text;
+    document.getElementById("taskList").appendChild(li);
+    document.getElementById("inp").value = "";
+});
+    </script>
+</html>
