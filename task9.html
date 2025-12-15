@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Size Change</title>
+</head>
+<body>
+
+    <h2>Change Image Size</h2>
+
+    <img id="img"
+         src="https://via.placeholder.com/300"
+         width="300">
+
+    <br><br>
+
+    <button id="small">Small</button>
+    <button id="large">Large</button>
+
+    <script>
+        let image = document.getElementById("img");
+
+        document.getElementById("small").addEventListener("click", function () {
+            image.setAttribute("width", "150");
+        });
+
+        document.getElementById("large").addEventListener("click", function () {
+            image.setAttribute("width", "400");
+        });
+    </script>
+
+</body>
+</html>

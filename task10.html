@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Theme Switcher</title>
+</head>
+<body id="body">
+
+    <h2>Theme Switcher</h2>
+    <button id="btn">Dark Mode</button>
+
+    <script>
+        let isDark = false;
+
+        document.getElementById("btn").addEventListener("click", function () {
+            if (isDark) {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                this.innerText = "Dark Mode";
+                isDark = false;
+            } else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                this.innerText = "Light Mode";
+                isDark = true;
+            }
+        });
+    </script>
+
+</body>
+</html>
